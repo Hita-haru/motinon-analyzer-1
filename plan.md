@@ -20,8 +20,14 @@
     make（一部ライブラリ用にcmakeを使用する）  
 ## 作成するコード
 - main.cpp  
-main関数を記述。  
-@Hita-haru  
+    main関数を記述。  
+    @Hita-haru  
 - vdload.cpp  
-動画をopencvで操作可能な形で読み込む  
-@zanzouda  
+    動画をopencvで操作可能な形で読み込む  
+    @zanzouda  
+- hmdetect.cpp  
+    画像の中で人間を探す  
+    （未分担）  
+- markrender.cpp  
+    人間の位置にマークする  
+    （未分担）  
