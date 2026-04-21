@@ -7,4 +7,11 @@
     随時追加する予定
 - 使用するコンパイラ・その他ツールなど  
     コンパイラ: clang++  
-    make  
+    make（一部ライブラリ用にcmakeを使用する）  
+## 作成するコード
+- main.cpp  
+main関数を記述。  
+@Hita-haru  
+- imload.cpp  
+動画をopencvで操作可能な形で読み込む  
+@zanzouda  
