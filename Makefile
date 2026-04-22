@@ -5,10 +5,10 @@ TARGET = motiana
 CXX = clang++
 
 # コンパイルオプション（警告と規格）
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -Wall -Wextra -std=c++17 `pkg-config --cflags opencv4`
 
 # リンクオプション（ncursesw ライブラリをリンク）
-LDFLAGS = -lncursesw
+LDFLAGS = -lncursesw `pkg-config --libs opencv4`
 
 # ソースファイルとオブジェクトファイル
 SRCS = $(wildcard *.cpp)
