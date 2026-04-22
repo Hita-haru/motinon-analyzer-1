@@ -3,6 +3,7 @@
 #include <locale.h>
 
 int selectmenu(WINDOW* menu_win);
+int errorwin(int errorcode, int errorlevel);
 
 void tuimenu_start(void) {
     initscr();
@@ -15,6 +16,7 @@ void tuimenu_start(void) {
     start_color();
     init_pair(1, COLOR_WHITE, COLOR_BLUE);
     init_pair(2, COLOR_WHITE, COLOR_CYAN);
+    init_pair(3, COLOR_WHITE, COLOR_RED);
 
     bkgd(COLOR_PAIR(1));
 
@@ -72,4 +74,31 @@ int selectmenu(WINDOW* menu_win) {
         return -1;
     }
     return 0;
+}
+
+int errorwin(int errorcode, int errorlevel) {
+    char getkey;
+    WINDOW* error_win = newwin(40, 100, 1, 1);
+    box(error_win, '=', 0);
+    
+    if (errorlevel == 1) {
+        wbkgd(error_win, COLOR_PAIR(1));
+        wattron(error_win, COLOR_PAIR(1));
+        mvwprintw(error_win, 2, 2, ":(");
+        mvwprintw(error_win, 4, 2, "エラーが発生しました。");
+        mvwprintw(error_win, 5, 2, "プログラムを終了するにはescキー、続行するにはなにか他のキーを押してください...");
+        mvwprintw(error_win, 6, 2, "エラーコード: %d", errorcode);
+        wattroff(error_win, COLOR_PAIR(1));
+        wrefresh(error_win);
+    } else {
+        wbkgd(error_win, COLOR_PAIR(3));
+        wattron(error_win, COLOR_PAIR(3));
+        mvwprintw(error_win, 2, 2, ":(");
+        mvwprintw(error_win, 4, 2, "重大なエラーが発生しました。");
+        mvwprintw(error_win, 5, 2, "プログラムを強制終了します。なにかキーを押してください...");
+        mvwprintw(error_win, 6, 2, "エラーコード: %d", errorcode);
+        wattroff(error_win, COLOR_PAIR(3));
+        wrefresh(error_win);
+        wgetch(error_win);
+    }
 }
