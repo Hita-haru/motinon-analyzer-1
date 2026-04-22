@@ -31,7 +31,7 @@
 - markrender.cpp  
     人間の位置にマークし、画面に表示する  
     （未分担）  
-- tuihandler.cpp  
+- tuihandler.cpp: 他のプログラム待ち  
     TUIでの操作コンソールを表示する  
     @Hita-haru  
 - 各種ヘッダーファイル.h  
