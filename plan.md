@@ -26,7 +26,7 @@ OpenCVを使用する際は`#include <opencv2/opencv.hpp>`でincludeしてくだ
     @Hita-haru  
 - vdload.cpp  
     動画をopencvで操作可能な形で読み込む  
-    （解像度を落とし、フレームを間引いて（3~5fps程度）処理の高速化）
+    （解像度を落とし、フレームを間引いて（3~5fps程度）処理の高速化）  
     @zanzouda  
 - hmdetect.cpp  
     画像の中で人間を探す  
