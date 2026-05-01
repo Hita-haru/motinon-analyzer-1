@@ -46,8 +46,8 @@ OpenCVを使用する際は`#include <opencv2/opencv.hpp>`でincludeしてくだ
 ## Gitの使い方
 ### 初期設定のやり方
 大前提として、パソコンでやってください。それもmacとかじゃない普通のwindowsパソコンで。もしない場合は要相談！  
-まずはgit bashを入れます。これは`git bash 入れ方`とかで調べればめちゃくちゃ出てきます。  
-【注意】インストールするときWindows Explorer integration→Git bash hereはオフにしないでね 便利なサイト -> https://google.com  
+まずはgit bashを入れます。これは`git bash 入れ方`とかで調べればめちゃくちゃ出てきます。 便利なサイト -> https://google.com  
+【注意】インストールするときWindows Explorer integration→Git bash hereはオフにしないでね  
 インストール後は一回再起動しといてね  
 あとgithubアカウントも作ってください。https://github.com  
 入れたらこのプログラムを入れとくフォルダを作りましょう。作らないとバラけるし最悪他の人にも迷惑がかかります。おすすめはドキュメントフォルダにmotianaって名前のフォルダを作ってください。  
