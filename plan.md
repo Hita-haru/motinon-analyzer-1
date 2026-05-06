@@ -119,7 +119,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
     ```
 2.  表示された `ssh-ed25519 AAA...` から始まる長い文字列を、マウスでドラッグしてコピーします。
 3.  GitHubの場合：
-    * **Settings** ＞ **SSH and GPG keys** ＞ **New SSH key** を開く。
+    * **Settings** ＞ **SSH and GPG keys** ＞ **New SSH key** を開く。 <- 注: アカウントの設定です。右上のアカウントアイコンをクリックしてSettingsを開く
     * Titleに適当な名前（例：My Windows PC）を付け、Keyの欄にコピーした内容を貼り付けて保存！
 
 ---
@@ -180,8 +180,17 @@ git add .
 git commit -m "＜コメント＞"
 git push origin <branch名>
 ```  
+直後にGithubを開きます。 https://github.com/Hita-haru/motinon-analyzer-1  
+すると上部に "Compare & pull request" と書かれている黄色いバーが出てくると思うので、  
+緑色のボタンをクリックすると自動的にプルリクエスト(以下PR)が作成されます。  
+ただそんなボタン出てこないことも結構あります。  
+そんなときは上のとこにある`Pull requests`をクリックしましょう。  
+そうしたら緑色の`New pull request`ボタンを押します。  
+色々出てくると思うので、下にスクロールしてさっきpushした`<branch名>`をクリックします。（なかったら多分pushできてない）  
+
 ### まとめ
 コードを編集後、以下のようにコマンドを打ち込めば大抵の場合OKです  
+あとPRの作り忘れに注意！PM（@Hita-haru）が確認できないので何もやってないことになっちゃいます  
 （やらないとは思うけどバカ正直にコピペしてそのままEnterとかはしないでね！）  
 ```Bash
 git checkout -b <branch名>
